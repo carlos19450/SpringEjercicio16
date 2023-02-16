@@ -1,4 +1,4 @@
-package com.dam.spring2022;
+package com.dam.proyectospring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

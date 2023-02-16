@@ -1,4 +1,4 @@
-package com.dam.spring2022;
+package com.dam.proyectospring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
