@@ -17,4 +17,24 @@ public class PilotoServicioImpl implements PilotoServicio {
     public List<Piloto> findAllPilotos() {
         return pilotoRepositorio.findAll();
     }
+
+    @Override
+    public Piloto findPiloto(String id) {
+        return pilotoRepositorio.findById(id).orElse(null);
+    }
+
+    @Override
+    public Piloto createPiloto(Piloto piloto) {
+        return pilotoRepositorio.save(piloto);
+    }
+
+    @Override
+    public Piloto updatePiloto(Piloto piloto) {
+        return pilotoRepositorio.save(piloto);
+    }
+
+    @Override
+    public void deletePiloto(String id) {
+        pilotoRepositorio.deleteById(id);
+    }
 }

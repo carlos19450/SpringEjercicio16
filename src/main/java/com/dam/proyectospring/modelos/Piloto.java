@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -28,5 +29,6 @@ public class Piloto implements Serializable {
     @Field("country")
     private String pais;
     @Field("date_of_birth")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate fechaNacimiento;
 }
