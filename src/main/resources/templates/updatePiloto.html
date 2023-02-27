@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Temporada 2023 de F1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid p-5 text-center">
+  <h1>Actualizar Piloto para la Temporada 2023 de F1</h1>
+</div>
+<div style="text-align: center">
+  <form th:action="@{/pilotos/{id} (id=${piloto.id})}" th:object="${piloto}" method="POST">
+    <label for="nombre">Nombre Piloto: </label>
+    <input id="nombre" type="text" name="nombre" th:field="*{nombre}"><br><br>
+    <label for="abreviatura" >Abreviatura Piloto: </label>
+    <input id="abreviatura" type="text" name="abreviatura" th:field="*{abreviatura}"><br><br>
+    <label for="numero" >Numero Piloto: </label>
+    <input id="numero" type="number" name="numero" th:field="*{numero}"><br><br>
+    <label for="equipo" >Equipo Piloto: </label>
+    <input id="equipo" type="text" name="equipo" th:field="*{equipo}"><br><br>
+    <label for="pais" >Pais Piloto: </label>
+    <input id="pais" type="text" name="pais" th:field="*{pais}"><br><br>
+    <label for="nacimiento" >Fecha de Nacimiento Piloto: </label>
+    <input id="nacimiento" type="date" name="nacimiento" th:field="*{fechaNacimiento}"><br><br>
+    <input type="submit" value="Actualizar Piloto">
+  </form>
+</div>
+
+
+</body>
+</html>
